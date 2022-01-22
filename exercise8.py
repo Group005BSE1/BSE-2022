@@ -6,4 +6,4 @@ a= 1+ r/n
 b=n*t
 e=a**b
 p=C*e
-print(p)
+print(round(p, 2))
