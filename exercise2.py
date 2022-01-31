@@ -1,4 +1,6 @@
-x = input("What is your name: ")
-print("Hello " + x)
-y = int(3.98)
-print(y)
+try:
+    a = float(input("Enter Hours: "))
+    b = float(input("Enter Rate: "))
+
+except:
+    print("Error, please enter numeric input")
