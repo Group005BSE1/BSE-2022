@@ -1,6 +1,5 @@
 a=0
 count=0
-c = []
 while True:
     try:
         num=input("enter the number")
@@ -16,9 +15,6 @@ while True:
                 min_number =int(num)
         a += int(num)
         count +=1
-        c.append(num)
     except:
         print("invalid input")
-
-print(a, count)
 print(max_number, min_number)
