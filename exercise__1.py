@@ -7,7 +7,6 @@ while True:
             break
         a+= int(num)
         count +=1
-        c.append(num)
     except:
         print("invalid input")
 b = (a/count)
