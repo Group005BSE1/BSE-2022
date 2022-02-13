@@ -17,4 +17,4 @@ while True:
         count +=1
     except:
         print("invalid input")
-print(max_number, min_number)
+print("Max number: {0} , Minimum number: {1} ".format(max_number, min_number))
