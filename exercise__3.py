@@ -27,6 +27,9 @@ def identifying_purchase_price(a):
                 a = ((checked_input * 100) // 5)
                 if (((checked_input * 100)) - (a * 5)) == 0:
                     return deposit_menu(), depositing(checked_input)
+                else:
+                    print("Illegal price: Must be a non-negative multiple of 5 cents.")
+                    return identifying_purchase_price(a)
             else:
                 print("Illegal price: Must be a non-negative multiple of 5 cents.")
                 return identifying_purchase_price(a)
