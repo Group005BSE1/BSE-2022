@@ -7,7 +7,7 @@ d = ["deposit a nickel", "deposit a dime", "deposit a quarter", "deposit a one d
 e = [0.05, 0.1, 0.25, 1, 5]
 count= 0
 def start(a,b):
-    print("Stock contains: ")
+    print("\nStock contains: ")
     for i in range(len(a)):
         print(a[i], "-", b[i])
     return identifying_purchase_price(a)
@@ -59,8 +59,11 @@ def returning_change(s, v):
     print("\nPlease take the change below")
     cummulative_addition = s - v
     cummulative_manager = 0
+    if cummulative_addition == 0:
+        print("No change due\n")
+        return "\n", start(a, b)
     remainder = 0
-    while round(cummulative_addition, 2) > 0:
+    while round(cummulative_addition, 2) >= 0:
         for (i) in range(3):
             g = 0
             z = round(cummulative_addition, 2) / e[2 - i]
@@ -90,9 +93,6 @@ def returning_change(s, v):
         else:
             print("Machine is out of change.\nSee store manager for remaining refund.\nAmount due is: {0} cents".format(round(cummulative_manager, 2) * 100))
         return "\n" , start(a,b)
-    elif round( (cummulative_addition) , 2 ) == 0:
-        print("No change due\n")
-        return "\n" , start(a,b)
     else:
-        return "\n" ,start(a,b)
+        return start(a,b)
 start(a,b)
