@@ -92,7 +92,7 @@ def returning_change(s, v):
                 print("Machine is out of change.\nSee store manager for remaining refund.\nAmount due is: {0} dollars {1} cents".format(real_dollar , remainder))
             else:
                 print("Machine is out of change.\nSee store manager for remaining refund.\nAmount due is: {0} cents".format(int(remainder)))
-                return "\n" , start(a,b)
+        return "\n" , start(a,b)
     else:
         return start(a,b)
 start(a,b)
