@@ -82,14 +82,15 @@ def returning_change(s, v):
                     cummulative_addition -= a[2 - i] * e[2 - i]
                     a[2 - i] -= a[2 - i]
         break
-    remainder = round(cummulative_manager, 2)*100
+    remainder = round(cummulative_addition, 2)*100
     if round(cummulative_addition, 2) > 0:
+        print(remainder)
         if int(cummulative_addition) != 0:
-            real_dollar = int(cummulative_addition)
+            real_dollar = 0
             if int(remainder) >= 100:
-                real_dollar += round(cummulative_manager, 2) / 1
-                cummulative_manager %= 1
-            print("Machine is out of change.\nSee store manager for remaining refund.\nAmount due is: {0} dollars {1} cents".format(real_dollar , round(cummulative_manager, 2) * 100))
+                real_dollar += remainder // 100
+                remainder %= 100
+            print("Machine is out of change.\nSee store manager for remaining refund.\nAmount due is: {0} dollars {1} cents".format(real_dollar , remainder))
         else:
             print("Machine is out of change.\nSee store manager for remaining refund.\nAmount due is: {0} cents".format(round(cummulative_manager, 2) * 100))
         return "\n" , start(a,b)
