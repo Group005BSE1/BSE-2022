@@ -8,4 +8,5 @@ a = m**2
 b = n ** 2
 k = a + b
 d = k ** 0.5
+
 print(d)
