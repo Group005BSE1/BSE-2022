@@ -17,7 +17,7 @@ if a >=5:
     print(str(int(a // 5)) + " fives")
 else:
     print("0 fives")
-a= a % 5
+a = a % 5
 if a >= 1:
     print(str(int(a // 1)) + " Ones")
 else:
