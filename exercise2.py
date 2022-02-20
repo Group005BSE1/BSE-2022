@@ -1,4 +1,10 @@
-x = input("What is your name: ")
-print("Hello " + x)
-y = int(3.98)
-print(y)
+try:
+    a = float(input("Enter Hours: "))
+    b = float(input("Enter Rate: "))
+    if(a >40):
+        print((40 * b) + ((a-40)*1.5* b))
+    else:
+        print(a*b)
+
+except:
+    print("Error, please enter numeric input")
