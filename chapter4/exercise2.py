@@ -5,5 +5,4 @@ C = float(input("Initial investment: "))
 r = float(input("Rate: "))
 t = float(input("time in years"))
 n = float(input("No of times interest given per year: "))
-
 print(return_investment(C, r , t, n))
