@@ -1,3 +1,6 @@
+#Group 5
+#Group members: Rubangakene Stuart, Bamukunda Joanitah, Assimwe Edrine, Mukooli Innocent, Atwiine Achiever, Kamanyire B. Arnold, Opio Regan
+#Date 21/02/2022
 print("Welcome to the Vending machine change maker")
 print("Change maker initialised")
 a = [25, 25, 25, 0, 0]
