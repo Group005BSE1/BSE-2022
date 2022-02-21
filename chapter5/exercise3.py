@@ -10,10 +10,12 @@ d = ["deposit a nickel", "deposit a dime", "deposit a quarter", "deposit a one d
 e = [0.05, 0.1, 0.25, 1, 5]
 count= 0
 def start(a,b):
+    #This is supposed to print the Stock to the terminal
     print("\nStock contains: ")
     for i in range(len(a)):
         print(a[i], "-", b[i])
     return identifying_purchase_price(a)
+#This function is supposed to evaluate the initial price of the purchase
 def identifying_purchase_price(a):
     user_input = input("\nEnter the purchase price (xx.xx) or `q' to quit:")
     if user_input == "q":
@@ -42,10 +44,12 @@ def identifying_purchase_price(a):
         else:
             print("Illegal price: Must be a non-negative multiple of 5 cents.")
             return identifying_purchase_price(a)
+#The next function below just displays the menu for deposits
 def deposit_menu():
     print("\nMenu for  deposits")
     for i in range(len(c)):
         print(c[i], "-", d[i])
+# The next function just evaluates how much is deposited and deducts from main balance or cancels the deposit.
 def depositing(y):
     balance = y
     while round(balance, 2) > 0:
@@ -61,6 +65,7 @@ def depositing(y):
             return returning_change(y, balance)
         elif deposit not in "ndqofc":
             print("Illegal selection:", deposit)
+#Incase of any balance the function below works out how to repay the customer
 def returning_change(s, v):
     print("\nPlease take the change below")
     cummulative_addition = s - v
