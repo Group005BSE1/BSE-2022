@@ -1,0 +1,5 @@
+str = "X_DSPAM_CONFIDENCE: 0.8475"
+l = str.find(":")
+z = (str[l + 1 : ])
+a = (float(z))
+print(a)
